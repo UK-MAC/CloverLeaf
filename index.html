@@ -25,6 +25,41 @@
         </ul>
       </header>
       <section>
+      <h3>Introduction</h3>
+      <p>
+      CloverLeaf is a mini-app that solves the compressible Euler equations on a
+      Cartesian grid, using an explicit, second-order accurate method. Each cell
+      stores three values: energy, density, and pressure. A velocity vector is
+      stored at each cell corner. This arrangement of data, with some quantities
+      at cell centers, and others at cell corners is known as a staggered grid.
+      CloverLeaf currently solves the equations in two dimensions, but
+      three dimensional support will be added in an upcoming release.
+      </p>
+
+      <p>
+      The computation in CloverLeaf has been broken down into "kernels" &mdash; low level
+      building blocks with minimal complexity. Each kernel loops over the entire grid
+      and updates one (or some) mesh variables, based on a kernel-dependent
+      computational stencil. Control logic within each kernel is kept to a minimum
+      , allowing maximum optimisation by the compiler. Memory is
+      sacrificed in order to increase peformance, and any updates to variables that
+      would introduce dependencies between loop iterations are written into copies of the mesh.
+      </p>
+
+      <p>
+      For more information, please see the documentiation included in the <a href="http://github.com/Warwick-PCAV/CloverLeaf">repository</a>.
+      </p>
+
+<h3>Released Implementations</h3>
+
+<ul>
+    <li>Reference implementation:</li>
+    <ul>
+        <li>Fortran, with OpenMP and MPI</li>
+    </ul>
+    <li>OpenACC</li>
+</ul>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="http://github.com/Warwick-PCAV">Performance Computing and Visualisation Group</a>, University of Warwick, UK</p>
