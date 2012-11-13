@@ -128,7 +128,7 @@ Fortran tends to vectorise without the use the specific pragmas due to the
 higher level definition of data compared to C. C almost always needs pragmas to 
 ensure that the compiler knows loops are safe to vectorise. Unfortunately there 
 is no common standard for vector pragmas across compiler vendors, though 
-#pragma ivdep works on many. This means that on some systems (e.g. IBM) the 
+\#pragma ivdep works on many. This means that on some systems (e.g. IBM) the 
 vector pragmas may need to be modified to attain peak performance of the C code. 
 Care needs to be taken with forcing vectorisation because even loops without 
 obviously data dependencies can calculate the wrong answers.
