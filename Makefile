@@ -17,6 +17,7 @@ help:
 	@echo "      - OpenACC                                                      "
 	@echo "           This version uses OpenACC directives to utilise GPU       "
 	@echo "           hardware.                                                 "
+	@echo "      - HMPP                                                      "
 	@echo "                                                                     "
 	@echo "  Build a particular version by typing:                              "
 	@echo "      \`make <flavour>\`                                             "
@@ -33,7 +34,7 @@ help:
 	@echo "      - SUN                                                    "
 	@echo "      - XLF                                                   "
 
-all: ref openmp mpi openacc opencl cuda
+all: ref openmp mpi openacc opencl cuda hmpp
 
 ref:
 	cd $(PACKAGE)_ref; make
@@ -50,9 +51,13 @@ mpi:
 openacc:
 	cd $(PACKAGE)_OpenACC; make
 
+hmpp:
+	cd  $(PACKAGE)_HMPP; make
+
 clean:
 	cd $(PACKAGE)_ref; make clean
 	cd $(PACKAGE)_Serial; make clean
 	cd $(PACKAGE)_OpenMP; make clean
 	cd $(PACKAGE)_MPI; make clean
 	cd $(PACKAGE)_OpenACC; make clean
+	cd  $(PACKAGE)_HMPP; make clean
