@@ -241,7 +241,7 @@ The second test to try is `clover_bm.in`. This runs for 2955 timesteps and is
 more sensitive than the first test. Through this simulation the whole 
 computational mesh in traversed by a shock and so it is a good test of the 
 parallel implementation because all internal boundaries will be crossed during 
-the course of the simulation. The final kinetic energy should be 0.2589E+01.
+the course of the simulation. The final kinetic energy should be 0.2590E+01.
 
 The third test to try is `clover_bm16_short.in`. This is the "socket" test and 
 has a much larger mesh size and therefore, memory footprint. The final kinetic 
