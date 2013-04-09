@@ -9,7 +9,10 @@ code.
 * Serial - contains a serial version with no MPI or OpenMP
 * OpenMP - contains an OpenMP version only with no MPI
 * MPI - contains an MPI only implementation
-* OpenACC - contains an OpenACC/MPI implementation
+* OpenACC - contains an OpenACC/MPI implementation that works under the Cray compiler
+* HMPP- contains another OpenACC/MPI implementation that works with the CAPS and Cray compiler
+* Offload - contains an Intel Offload/MPI implementation
+* CUDA - contains the CUDA/MPI implementation
 * Ref - contains a hybrid OpenMP/MPI implemention. The Serial, OpenMP and MPI 
 versions are extracted from this version so should not diverge from it apart 
 from the removal of the relevant software models.
@@ -55,7 +58,7 @@ Other supported compiler that will be recognised are:-
 * CRAY
 * SUN
 * GNU
-* XLF
+* XL
 * PATHSCALE
 * PGI
 
@@ -64,7 +67,7 @@ The default flags for each of these is show below:-
 * INTEL: -O3 -ipo
 * SUN: -fast
 * GNU: -ipo
-* XLF: -O5
+* XL: -O5
 * PATHSCLE: -O3
 * PGI: -O3 -Minline
 * CRAY: -em  _Note: that by default the Cray compiler with pick the optimum 
@@ -92,7 +95,7 @@ For each compiler the flags associated with IEEE are shown below:-
 * GNU: -ffloat-store
 * PGI: -Kieee
 * PATHSCALE: -mieee-fp
-* XLF: -qstrict –qfloat=nomaf
+* XL: -qstrict –qfloat=nomaf
 
 Note that the MPI communications have been written to ensure bitwise identical 
 answers independent of core count. However under some compilers this is not 
@@ -106,6 +109,8 @@ Extra options can be added without modifying the makefile by adding two further
 flags, `OPTIONS` and `C_OPTIONS`, one for the Fortran and one for the C options.
 
 `make COMPILER=INTEL OPTIONS=-xavx C_OPTIONS=-xavx`
+
+A build for a Xeon Phi would just need the -xavx option above replaced by -mmic.
 
 Finally, a `DEBUG` flag can be set to use debug options for a specific compiler.
 
@@ -137,9 +142,21 @@ obviously data dependencies can calculate the wrong answers.
 
 The makefile for this build does not differ from the Base version. In this case 
 it is important to have the correct environment loaded on the system of use. 
-On the Cray systems this will usually involve loading some Nvidia and 
+On the Cray systems this will usually involve loading some NVIDIA and 
 accelerator modules. Without these the code will still compile and run but the 
 OpenACC pragmas wil be ignored and the calculation will take place on the CPU.
+
+### HMPP Build
+
+The makefile for this build does not differ from the Base version. 
+It is also important to have the correct environment loaded on the system of use. 
+This will usually involve loading some NVIDIA and accelerator modules. Without 
+these the code will still compile and run but the OpenACC pragmas wil be ignored
+and the calculation will take place on the CPU. To use the CAPS HMPP compiler for
+the OpenACC pragmas it is neccessary to modify the make line so that the MPI_COMPILER
+variable is pree-fixed with "hmpp" plus the addition of any system specific flags, say
+for example nvcc flags is the code is targetting a GPU.
+
 
 ### Co-Array Build
 
@@ -158,8 +175,10 @@ currently under production and testing.
 
 ### CUDA Build
 
-A CUDA build of CloverLeaf will be included in a future release, and is 
-currently under production and testing.
+A CUDA build of CloverLeaf is now included in the repository, and has 
+been tested on large GPU systems successfully. One extra command is required
+to compile to take account on the NVIDIA GPU being used. Set NV_ARCH=FERMI for
+M2090 cards and NV_ARCH=KEPLER for K20 cards.
 
 ## Running the Code
 
