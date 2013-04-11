@@ -1,0 +1,24 @@
+[submodule "CloverLeaf_ref"]
+	path = CloverLeaf_ref
+	url = git@github.com:Warwick-PCAV/CloverLeaf_ref.git
+[submodule "CloverLeaf_CUDA"]
+	path = CloverLeaf_CUDA
+	url = git@github.com:Warwick-PCAV/CloverLeaf_CUDA.git
+[submodule "CloverLeaf_Offload"]
+	path = CloverLeaf_Offload
+	url = git@github.com:Warwick-PCAV/CloverLeaf_Offload.git
+[submodule "CloverLeaf_HMPP"]
+	path = CloverLeaf_HMPP
+	url = git@github.com:Warwick-PCAV/CloverLeaf_HMPP.git
+[submodule "CloverLeaf_Serial"]
+	path = CloverLeaf_Serial
+	url = git@github.com:Warwick-PCAV/CloverLeaf_Serial.git
+[submodule "CloverLeaf_OpenMP"]
+	path = CloverLeaf_OpenMP
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenMP.git
+[submodule "CloverLeaf_OpenACC"]
+	path = CloverLeaf_OpenACC
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenACC.git
+[submodule "CloverLeaf_MPI"]
+	path = CloverLeaf_MPI
+	url = git@github.com:Warwick-PCAV/CloverLeaf_MPI.git
