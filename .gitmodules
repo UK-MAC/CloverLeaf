@@ -22,3 +22,15 @@
 [submodule "CloverLeaf_MPI"]
 	path = CloverLeaf_MPI
 	url = git@github.com:Warwick-PCAV/CloverLeaf_MPI.git
+[submodule "CloverLeaf_OpenMP4"]
+	path = CloverLeaf_OpenMP4
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenMP4.git
+[submodule "CloverLeaf_OpenACC_CRAY"]
+	path = CloverLeaf_OpenACC_CRAY
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenACC_CRAY.git
+[submodule "CloverLeaf_OpenACC_KERNELS"]
+	path = CloverLeaf_OpenACC_KERNELS
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenACC_KERNELS.git
+[submodule "CloverLeaf_OpenACC_LOOPS"]
+	path = CloverLeaf_OpenACC_LOOPS
+	url = git@github.com:Warwick-PCAV/CloverLeaf_OpenACC_LOOPS.git
