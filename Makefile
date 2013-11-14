@@ -1,6 +1,5 @@
 PACKAGE=CloverLeaf
 
-
 help:
 	@echo "  CloverLeaf, a Lagrangian-Eulerian hydrodynamics mini-application   "
 	@echo "                                                                     "
@@ -14,10 +13,18 @@ help:
 	@echo "           This is the parallel MPI implementation.                  "
 	@echo "      - OpenMP                                                       "
 	@echo "           This version is threaded using MPI directives.            "
-	@echo "      - OpenACC                                                      "
+	@echo "      - OpenACC_KERNELS                                              "
 	@echo "           This version uses OpenACC directives to utilise GPU       "
 	@echo "           hardware.                                                 "
-	@echo "      - HMPP                                                      "
+	@echo "      - OpenACC_LOOPS                                                "
+	@echo "           This version uses OpenACC directives to utilise GPU       "
+	@echo "           hardware.                                                 "
+	@echo "      - OpenACC_CRAY                                                 "
+	@echo "           This version uses OpenACC directives to utilise GPU       "
+	@echo "           hardware.                                                 "
+	@echo "      - Offload                                                      "
+	@echo "      - CUDA                                                         "
+	@echo "      - OpenMP 4                                                     "
 	@echo "                                                                     "
 	@echo "  Build a particular version by typing:                              "
 	@echo "      \`make <flavour>\`                                             "
@@ -34,7 +41,7 @@ help:
 	@echo "      - SUN                                                    "
 	@echo "      - XLF                                                   "
 
-all: ref openmp mpi openacc opencl cuda hmpp
+all: ref openmp mpi openacc_cray openacc_kernels openacc_loops cuda openmp4 serial offload
 
 ref:
 	cd $(PACKAGE)_ref; make
@@ -48,16 +55,32 @@ openmp:
 mpi:
 	cd $(PACKAGE)_MPI; make
 
-openacc:
-	cd $(PACKAGE)_OpenACC; make
+openmp4:
+	cd $(PACKAGE)_OpenMP4; make
 
-hmpp:
-	cd  $(PACKAGE)_HMPP; make
+openacc_cray:
+	cd $(PACKAGE)_OpenACC_CRAY; make
+
+openacc_kernels:
+	cd $(PACKAGE)_OpenACC_KERNELS; make
+
+openacc_loops:
+	cd $(PACKAGE)_OpenACC_LOOPS; make
+
+cuda:
+	cd $(PACKAGE)_CUDA; make
+
+offload:
+	cd $(PACKAGE)_Offload; make
 
 clean:
 	cd $(PACKAGE)_ref; make clean
 	cd $(PACKAGE)_Serial; make clean
 	cd $(PACKAGE)_OpenMP; make clean
 	cd $(PACKAGE)_MPI; make clean
-	cd $(PACKAGE)_OpenACC; make clean
-	cd  $(PACKAGE)_HMPP; make clean
+	cd $(PACKAGE)_OpenMP4; make clean
+	cd $(PACKAGE)_OpenACC_CRAY; make clean
+	cd $(PACKAGE)_OpenACC_KERNELS; make clean
+	cd $(PACKAGE)_OpenACC_LOOPS; make clean
+	cd $(PACKAGE)_CUDA; make clean
+	cd $(PACKAGE)_Offload; make clean
