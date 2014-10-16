@@ -25,7 +25,7 @@
         </ul>
       </header>
       <section>
-      <h3>Introduction</h3>
+      <h1>Introduction</h1>
       <p>
       CloverLeaf is a mini-app that solves the compressible Euler equations on a
       Cartesian grid, using an explicit, second-order accurate method. Each cell
@@ -51,15 +51,151 @@
       For more information, please see the documentiation included in the <a href="http://github.com/Warwick-PCAV/CloverLeaf">repository</a>.
       </p>
 
-<h3>Publications</h3>
+
+
+<h1>Released Implementations</h1>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_ref">Reference</a>
+</h2>
+
+<p>This is the reference release of the code.
+This version features both MPI and OpenMP as default.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_Serial">Serial</a>
+</h2>
+
+<p>This is the serial version of the code, with no parallelism.
+This can be used as a reference version for new language ports.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_MPI">MPI</a>
+</h2>
+
+<p>This is the domain decomposed MPI implementation of CloverLeaf.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenMP">OpenMP</a>
+</h2>
+
+<p>This is the on node parallelism OpenMP implementation.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenMP4">OpenMP4</a>
+</h2>
+
+<p>This is the extension of the OpenMP version, to make use of the new directives in OpenMP4.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenACC_Loops">OpenACC Loops</a>
+</h2>
+
+<p>This is the OpenACC offload version using loop directives.</p>
+
+<hr/>
+
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenACC_KERNELS">OpenACC Kernels</a>
+</h2>
+
+<p>This is the OpenACC offload version using kernel directives.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenACC_CRAY">OpenACC Cray</a>
+</h2>
+
+<p>This is the OpenACC offload version using Cray directives.</p>
+
+<hr/>
+
+
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_Offload">Intel Offload</a>
+</h2>
+
+<p>This is the offload version using Intel offload directives.</p>
+
+<hr/>
+
+
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_CUDA">CUDA</a>
+</h2>
+
+<p>This is a native GPU implementation written in CUDA.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenCL">OpenCL</a>
+</h2>
+
+<p>This is a native GPU implementation written in OpenCL.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/gihanmudalige/OPS">OPS</a>
+</h2>
+
+<p>This is an implemementation of CloverLeaf using the OPS framework, providing an abstraction layer for the CPU, GPU and Intel MIC.</p>
+
+<hr/> 
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_CAF_arrays">CAF Arrays</a>
+</h2>
+
+<p>This is a PGAS implmentation using Coarray Fortran with Arrays.</p>
+
+<hr/> 
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_CAF_buffers">CAF Buffers</a>
+</h2>
+
+<p>This is a PGAS implmentation using Coarray Fortran with explicit buffers.</p>
+
+<hr/>
+
+<h2>
+<a href="https://github.com/Warwick-PCAV/CloverLeaf_OpenSHMEM">OpenSHMEM</a>
+</h2>
+
+<p>This is a PGAS implmentation using OpenSHMEM.</p>
+
+<hr/>
+
+
+
+
+<h1>Publications</h1>
 <p>
 <ul>
 <li><em>Accelerating Hydrocodes with OpenACC, OpenCL, and CUDA</em>, JA Herdman, WP Gaudin, S McIntosh-Smith, M Boulton, DA Beckingsale, AC Mallinson, SA Jarvis, 3rd International Workshop on Performance Modeling, Benchmarking and Simulation (PMBS12), held as part of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC12), Salt Lake City, November 10-16, 2012.</li>
+<li><em>High-level Abstractions for Performance, Portability and Continuity of Scientific Software on Future Computing Systems</em>, G.R. Mudalige, I.Z. Reguly, M.B. Giles, W. Gaudin, A. Mallinson and O. Perks</li>
+
 </ul>
 </p>
 
-<h3>Released Implementations</h3>
 
+<!--
 <ul>
     <li>Reference implementation:</li>
     <ul>
@@ -68,7 +204,7 @@
     <li>OpenACC</li>
     <li><a href="https://github.com/gihanmudalige/OPS">OPS</a> -an API with associated libraries and preprocessors to generate parallel executables for applications on mulit-block structured grids.</li>
 </ul>
-
+-->
       <p>
         <img src="images/hydro.png" width=320px alt="Hydrodynamics visualisation" style="display:block; margin:auto;" />
       </p>
