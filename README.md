@@ -1,4 +1,4 @@
-![image](Clover_alpha_small.png)
+![image](Clover_alpha_small.png "CloverLeaf 2D")
 
 # CloverLeaf Compilation and Usage
 
