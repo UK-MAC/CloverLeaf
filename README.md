@@ -1,3 +1,5 @@
+[image][(https://github.com/Warwick-PCAV/CloverLeaf/Clover_alpha_small.png "Logo Title Text 1")]
+
 # CloverLeaf Compilation and Usage
 
 ## CloverLeaf Directory Structure
