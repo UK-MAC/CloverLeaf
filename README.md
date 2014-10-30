@@ -1,4 +1,4 @@
-[image][(https://github.com/Warwick-PCAV/CloverLeaf/Clover_alpha_small.png "Logo Title Text 1")]
+![image](Clover_alpha_small.png)
 
 # CloverLeaf Compilation and Usage
 
