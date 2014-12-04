@@ -39,6 +39,9 @@ Or on Cray systems:
 
 `make MPI_COMPILER=ftn C_MPI_COMPILER=cc`
 
+Bespoke builds for some specific architectures with non-default compiler locations / invocations can be found here.
+https://github.com/UK-MAC/CloverLeaf/wiki/Build-Notes
+
 ### OpenMP Build
 
 All compilers use different arguments to invoke OpenMP compilation. A simple 
