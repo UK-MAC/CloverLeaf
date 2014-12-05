@@ -1,4 +1,4 @@
-# CloverLeaf Compilation and Usage ![image](Clover3D_alpha_small.png "CloverLeaf")
+# CloverLeaf Compilation and Usage ![image](Clover_alpha_small.png "CloverLeaf")
 
 ## CloverLeaf Directory Structure
 
