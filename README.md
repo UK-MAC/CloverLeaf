@@ -258,7 +258,7 @@ sensitive test and the kinetic energy at the end of this run should be 0.1193E+0
 It is quick to run, even on a single core, and should stop after 87 steps. If the 
 keyword "test_problem 2" is included in the input, then it will self test against a known solution.
 Typical run time on a single core is about 20 seconds though this clearly depends on the hardware.
-Typical run time on a dual socket node is about 5 seconds.
+Typical run time on a dual socket node is about 2.5 seconds.
 
 The second test to try is `clover_bm.in`. This runs for 2955 timesteps and is 
 more sensitive than the first test. Through this simulation the whole 
@@ -266,21 +266,21 @@ computational mesh in traversed by a shock and so it is a good test of the
 parallel implementation because all internal boundaries will be crossed during 
 the course of the simulation. The final kinetic energy should be 0.2590E+01. If the 
 keyword "test_problem 3" is included in the input, then it will self test against a known solution.
-Typical run time on a single core is about 700 seconds.
-Typical run time on a dual socket node is about 170 seconds.
+Typical run time on a single core is about 950 seconds.
+Typical run time on a dual socket node is about 100 seconds.
 
 The third test to try is `clover_bm16_short.in`. This is the "socket" test and 
 has a much larger mesh size and therefore, memory footprint. The final kinetic 
 energy should be 0.3075E+00. If the keyword "test_problem 4" is included in the input,
 then it will self test against a known solution.
-Typical run time on a single core is about 400 seconds.
-Typical run time on a single dual socket node is about 90 seconds.
+Typical run time on a single core is about 450 seconds.
+Typical run time on a single dual socket node is about 70 seconds.
 
 The last test to run for validation purposes is `clover_bm16.in`. This is a 
 fairly long, large mesh run and the kinetic energy at the final time should be 
 0.4854E+01. If the keyword "test_problem 5" is included in the input, then it will self test against
 a known solution.
-Typical run time on a single core is about 6000 seconds.
-Typical run time on a single dual socket node is about 1500 seconds.
+Typical run time on a single core is about 12000 seconds.
+Typical run time on a single dual socket node is about 1700 seconds.
 
-A wide ranging set of performance figures can be found here.
+A wide ranging set of performance figures can be found in the README for each version.
