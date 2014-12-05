@@ -283,7 +283,7 @@ The last test to run for validation purposes is `clover_bm16.in`. This is a
 fairly long, large mesh run and the kinetic energy at the final time should be 
 0.4854E+01. If the keyword "test_problem 5" is included in the input, then it will self test against
 a known solution.
-Typical run time on a single core is about 12000 seconds.
+Typical run time on a single core is about 14500 seconds.
 Typical run time on a single dual socket node is about 1700 seconds.
 
 A wide ranging set of performance figures can be found in the README for each version.
